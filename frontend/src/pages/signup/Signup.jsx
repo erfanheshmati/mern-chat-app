@@ -36,38 +36,40 @@ export default function Signup() {
                         <label className="label p-2">
                             <span className="text-base label-text">Full Name</span>
                         </label>
-                        <input type="text" placeholder="Enter fullname..." className="w-full input input-bordered h-10" onChange={(e) => setInputs({ ...inputs, fullname: e.target.value })} value={inputs.fullname} />
+                        <input type="text" placeholder="Enter fullname..." className="w-full input input-bordered h-10" value={inputs.fullname} onChange={(e) => setInputs({ ...inputs, fullname: e.target.value })} />
                     </div>
 
                     <div>
                         <label className="label p-2">
                             <span className="text-base label-text">Username</span>
                         </label>
-                        <input type="text" placeholder="Enter username..." className="w-full input input-bordered h-10" onChange={(e) => setInputs({ ...inputs, username: e.target.value })} value={inputs.username} />
+                        <input type="text" placeholder="Enter username..." className="w-full input input-bordered h-10" value={inputs.username} onChange={(e) => setInputs({ ...inputs, username: e.target.value })} />
                     </div>
 
                     <div>
                         <label className="label p-2">
                             <span className="text-base label-text">Password</span>
                         </label>
-                        <input type="password" placeholder="Enter password..." className="w-full input input-bordered h-10" onChange={(e) => setInputs({ ...inputs, password: e.target.value })} value={inputs.password} />
+                        <input type="password" placeholder="Enter password..." className="w-full input input-bordered h-10" value={inputs.password} onChange={(e) => setInputs({ ...inputs, password: e.target.value })} />
                     </div>
 
                     <div>
                         <label className="label p-2">
                             <span className="text-base label-text">Confirm Password</span>
                         </label>
-                        <input type="password" placeholder="Enter confirm password..." className="w-full input input-bordered h-10" onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })} value={inputs.confirmPassword} />
+                        <input type="password" placeholder="Enter confirm password..." className="w-full input input-bordered h-10" value={inputs.confirmPassword} onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })} />
                     </div>
 
                     <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender} />
 
-                    <Link to="/login" className="text-sm hover:underline hover:text-blue-600 mt-4 inline-block">
+                    <Link to="/login" className="text-sm hover:underline hover:text-blue-400 mt-3 px-1 inline-block">
                         Already have an account? Login
                     </Link>
 
                     <div>
-                        <button className="btn btn-block btn-sm mt-4">Sign Up</button>
+                        <button className="btn btn-block btn-sm mt-4 hover:opacity-70" disabled={loading}>
+                            {loading ? <span className="loading loading-spinner"></span> : "Sign Up"}
+                        </button>
                     </div>
                 </form>
 

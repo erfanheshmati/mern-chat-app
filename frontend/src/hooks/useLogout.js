@@ -20,7 +20,6 @@ export default function useLogout() {
       setLoading(false);
       setAuthUser(null);
     } catch (error) {
-      setLoading(false);
       toast.error(error.message);
     } finally {
       setLoading(false);
