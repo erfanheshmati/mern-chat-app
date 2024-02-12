@@ -8,7 +8,6 @@ import userRoute from "./routes/userRoute.js";
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
 
-
 dotenv.config();
 const PORT = process.env.PORT || 5000;
 
