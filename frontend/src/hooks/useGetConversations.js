@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
 
 export default function useGetConversations() {
   const [loading, setLoading] = useState(false);
@@ -14,7 +13,7 @@ export default function useGetConversations() {
         if (data.error) throw new Error(data.error);
         setConversations(data);
       } catch (error) {
-        toast.error(error.message);
+        console.log(error.message);
       } finally {
         setLoading(false);
       }
