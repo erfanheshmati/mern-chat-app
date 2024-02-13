@@ -13,7 +13,8 @@ export default function Conversations() {
             {!loading && conversations.length === 0 && <div className="text-center">There are no users to chat</div>}
 
             {conversations.map((conversation, index) => (
-                <Conversation key={conversation._id} conversation={conversation} emoji={getRandomEmoji()} lastIndex={index === conversation.length - 1} />
+                // <Conversation key={conversation._id} conversation={conversation} emoji={getRandomEmoji()} lastIndex={index === conversation.length - 1} />
+                <Conversation key={conversation._id} conversation={conversation} lastIndex={index === conversation.length - 1} />
             ))}
         </div>
     )
