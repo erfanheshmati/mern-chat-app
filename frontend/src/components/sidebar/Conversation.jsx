@@ -2,7 +2,7 @@ import useConversation from "../../zustand/useConversation"
 
 
 export default function Conversation({ conversation, lastIndex, emoji }) {
-    const [selectedConversation, setSelectedConversation] = useConversation()
+    const { selectedConversation, setSelectedConversation } = useConversation()
     const isSelected = selectedConversation?._id === conversation._id
 
     return (
